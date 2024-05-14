@@ -58,7 +58,7 @@ def train(args):
             print(loss.item())
             print('=========')
         
-        if pre_epoch % 10 ==0:
+        if pre_epoch % 800 ==0:
             torch.save(generator.state_dict(), './model/pre_trained_model_%03d.pt'%pre_epoch)
 
         
@@ -129,7 +129,7 @@ def train(args):
             print(d_loss.item())
             print('=========')
 
-        if fine_epoch % 5 ==0:
+        if fine_epoch % 500 ==0:
             #torch.save(generator.state_dict(), './model/SRGAN_gene_%03d.pt'%fine_epoch)
             #torch.save(discriminator.state_dict(), './model/SRGAN_discrim_%03d.pt'%fine_epoch)
             torch.save(generator.state_dict(), './model/SRGAN_gene_%03d.pt'%fine_epoch)
@@ -205,6 +205,5 @@ def test_only(args):
             output = output.transpose(1,2,0)
             result = Image.fromarray((output * 255.0).astype(np.uint8))
             result.save('./result/res_%04d.png'%i)
-
 
 
