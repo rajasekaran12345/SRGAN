@@ -1,1 +1,1 @@
-# SRGAN
+# SRGAN marine image enhancement
