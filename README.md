@@ -1,1 +1,1 @@
-# SRGAN marine image enhancement
+# SRGAN marine image enhancement (UnderGraduate) project
